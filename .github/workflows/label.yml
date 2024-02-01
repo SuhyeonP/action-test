@@ -26,18 +26,9 @@ jobs:
       - name: Checkout your code
         uses: actions/checkout@v4
 
-      - name: Sparse checkout
-        uses: ./
-        with:
-          sparse-checkout: |
-            .github
-          path: sparse-checkout
-
-
-      - name: Check Labels
-        id: labeler
-        uses: jimschubert/labeler-action@v1
-        with:
+      - name: label-by-branch
+        uses: anencore94/labeler@v1.1.0
+        env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
       - name: label-by-size
