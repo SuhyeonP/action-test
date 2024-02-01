@@ -23,9 +23,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout your code
-        uses: actions/checkout@v4
-
       - name: label-by-branch
         uses: anencore94/labeler@v1.1.0
         env:
