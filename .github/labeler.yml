@@ -6,28 +6,26 @@ enable:
 # 레이블을 성공적으로 붙이고 PR에 보낼 코멘트를 설정
 comments:
   prs: |
-    라벨 붙었습니다.
+    Labeler has applied any labels matching special text in your title and description.
+    Please review the labels and make any necessary changes.
 
 # 레이블
 labels:
-  'bugfix':
+  'bug':
     include:
-      - '\bbugfix\b'
+      - '\bfix\b'
   'test':
     include:
       - '\btest\b'
   'feature':
     include:
-      - '\feature\b'
+      - '\bfeat\b'
   'documentation':
     include:
       - '\bdocs\b'
   'refactor':
     include:
       - '\brefactor\b'
-  'production':
+  'chore':
     include:
-      - '\bproduction\b'
-  'phase':
-    include:
-      - '\bphase-\b'
+      - '\bchore\b'
