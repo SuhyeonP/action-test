@@ -23,12 +23,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Label to PR
-        uses: naver/simple-labeler@latest
+      - name: Checkout your code
+        uses: actions/checkout@v3
+
+      - name: Check Labels
+        id: labeler
+        uses: jimschubert/labeler-action@v1
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          labels: "D-3"
-          duplicate: "D-*"
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
       - name: label-by-size
         uses: pascalgn/size-label-action@v0.4.3
