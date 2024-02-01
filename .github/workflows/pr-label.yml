@@ -13,12 +13,6 @@ jobs:
   update_release_draft:
     runs-on: ubuntu-latest
     steps:
-      - name: label-by-branch
-        uses: jimschubert/labeler-action@v1
-        with:
-          config_path: ".github/labeler.yaml"
-        env:
-          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
       - name: label-by-size
         uses: pascalgn/size-label-action@v0.4.3
         env:
