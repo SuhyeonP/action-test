@@ -7,7 +7,7 @@ on:
       - synchronize
       - reopened
     branches:
-      - master
+      - main
       - phase-* # This will run on any branch that starts with "phase-"
 jobs:
   update_release_draft:
